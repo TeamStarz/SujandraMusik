@@ -212,8 +212,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                 [
                     [
+
                         InlineKeyboardButton("Channel", url='https://t.me/Rezy_IsBack')
                         InlineKeyboardButton("Instagram", url='https://www.instagram.com/ridhoalfahrezi._')
+
                     ],
                     [
                         InlineKeyboardButton(
