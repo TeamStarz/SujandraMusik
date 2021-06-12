@@ -97,7 +97,7 @@ async def play(_, message: Message):
                         text="Channel",
                         url="https://Rezy_IsBack")
                 ],[
-                    InlineKeyboardButton("Instagram",url="https://www.instagram.com/ridhoalfahrezi._) 
+                    InlineKeyboardButton("Instagram",url="https://www.instagram.com/ridhoalfahrezi._") 
                    
                 ]
             ]
