@@ -11,9 +11,9 @@ async def start(_, message: Message):
     await message.reply_text(
         f"""Hai 👋🏻, I Am Zeed Music.
 
-I Can Play Music In Your Group's Voice Call. Developed by [Rezy](https://t.me/Reeeeeezy).
+I Can Play Music In Your Group's Voice Call. Developed by [Rezy](https://t.me/Reeeeeezy).\n•Add [Me](https://t.me/ZeedRobot) and My [Assistant](https://ZeedAssistance) To Your Group.\n• Give Admin Access To The [Zeed Music](https://t.me/ZeedRobot). 
 
-Add Me To Your Group And Play Music Freely!
+Happy Listening to the Music!
         """,
         reply_markup=InlineKeyboardMarkup(
             [
