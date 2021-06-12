@@ -7,29 +7,29 @@ from helpers.filters import other_filters2
 
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
-    await message.reply_sticker("CAADBQADKAIAAmQgIVd2e584kTrkUgI")
+    await message.reply_sticker("CAACAgIAAxkBAAEKL_1gt842-B5SnR5eHrlBsfTviEt2GwACrAsAAt_YUUnNC_qAE0qWKR8E")
     await message.reply_text(
-        f"""Hai 👋🏻, I am Sujandra 🎵
+        f"""Hai 👋🏻, I Am Zeed Music.
 
-I can play music in your group's voice call. Developed by [Hendra](https://t.me/IamYourEnemy).
+I Can Play Music In Your Group's Voice Call. Developed by [Rezy](https://t.me/Reeeeeezy).
 
-Add me to your group and play music freely!
+Add Me To Your Group And Play Music Freely!
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🎛 Commands", url="https://telegra.ph/Sujandra-Musik-04-24")
+                        "Commands", url="https://t.me/ZeedGoodBoys/14")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/VcgSupportGroup"
+                        "Group Music", url="https://t.me/ZeeedMusic"
                     ),
                     InlineKeyboardButton(
-                        "🔊 Channel", url="https://t.me/Kutipankataaa"
+                        "Channel", url="https://t.me/Rezy_IsBack"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "🎁 Donasi", url="https://t.me/IamYourEnemy"
+                        "Instagram", url="https://www.instagram.com/ridhoalfahrezi._"
                     )]
             ]
         ),
@@ -38,12 +38,12 @@ Add me to your group and play music freely!
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**Sujandra Music Player Online ✅**""",
+      await message.reply_text("""**Zeed Music Player Online**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Support Channel 🌻", url="https://t.me/AkuUserBot")
+                        "Group", url="https://t.me/Republicfriend")
                 ]
             ]
         )
