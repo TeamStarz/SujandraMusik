@@ -41,17 +41,17 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Found Nothing.\n\nTry another keywork or maybe spell it properly."
+            "❌ Found Nothing.\n\nTry Another Keywork or Maybe Spell it Properly."
         )
         print(str(e))
         return
-    m.edit("Downloading the song by @IamYourEnemy...")
+    m.edit("Downloading the song by @ZeeedMusic...")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**🎵 Uploaded by [Hendra](t.me/IamYourEnemy)**'
+        rep = '**🎶 Uploaded by [Zeed Music](t.me/ZeeedMusic)**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
