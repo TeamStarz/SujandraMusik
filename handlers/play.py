@@ -86,7 +86,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 Processing Sounds...")
+    lel = await message.reply("⏳ Processing Sounds...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -94,10 +94,10 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="Channel Bucin",
-                        url="https://t.me/Kutipankataaa")
+                        text="Channel",
+                        url="https://Rezy_IsBack")
                 ],[
-                    InlineKeyboardButton("Close",'cls') 
+                    InlineKeyboardButton("Instagram",url="https://www.instagram.com/ridhoalfahrezi._) 
                    
                 ]
             ]
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+                f"❌ Videos Longer Than {DURATION_LIMIT} Minute(s) Aren't Allowed To Play!"
             )
 
         file_name = get_file_name(audio)
@@ -122,8 +122,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Channel Info",
-                            url=f"https://t.me/AkuUserBot")
+                            text="Channel",
+                            url=f"https://t.me/Rezy_IsBack")
 
                     ]
                 ]
@@ -151,8 +151,8 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Follow Instagram 🌻",
-                                url=f"https://instagram.com/hendraputraaaaaa")
+                                text="Instagram",
+                                url=f"https://www.instagram.com/ridhoalfahrezi._")
 
                         ]
                     ]
@@ -166,8 +166,8 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Support Group",
-                                url=f"https://t.me/VcgSupportGroup")
+                                text="Group Music",
+                                url=f"https://t.me/ZeeedMusic")
 
                         ]
                     ]
@@ -187,7 +187,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += ' ' + str(i)
         print(query)
-        await lel.edit("🎵 Processing sounds...")
+        await lel.edit("⏳ Processing sounds...")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -204,7 +204,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             lel.edit(
-                "❌ Song not found.\n\nTry another song or maybe spell it properly."
+                "❌ Song Not Found.\n\nTry Another Song Or Maybe Spell It Properly."
             )
             print(str(e))
             return
@@ -213,8 +213,8 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Follow Instagram 🌻",
-                            url=f"https://instagram.com/hendraputraaaaaa")
+                            text="Instagram",
+                            url=f"https://www.instagram.com/ridhoalfahrezi._")
 
                     ]
                 ]
@@ -227,7 +227,8 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"#⃣ Your requested song **queued** at position {position}!",
+        caption = f"🏷 **judul:** [{title[:60]}](url)\n⏱ **Durasi:** {duration}\n🔮 **Status:** Queued {position}!\n" \
+                + f"🎧 **Permintaan:** {message.from_user.mention}",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -237,7 +238,7 @@ async def play(_, message: Message):
         photo="final.png",
         reply_markup=keyboard,
         caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
+                + f"🔮 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
         message.from_user.mention()
         ),
     )
