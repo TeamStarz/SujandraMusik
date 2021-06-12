@@ -212,9 +212,13 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
                 [
                     [
+                        InlineKeyboardButton("Channel", url='https://t.me/Rezy_IsBack')
+                        InlineKeyboardButton("Instagram", url='https://www.instagram.com/ridhoalfahrezi._')
+                    ],
+                    [
                         InlineKeyboardButton(
-                            text="Instagram",
-                            url=f"https://www.instagram.com/ridhoalfahrezi._")
+                            text="Group Music",
+                            url='https://t.me/ZeeedMusic')
 
                     ]
                 ]
@@ -227,7 +231,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption = f"🏷 **judul:** [{title[:60]}](url)\n⏱ **Durasi:** {duration}\n🔮 **Status:** Queued {position}!\n" \
+        caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n🔮 **Status:** Queued {position}!\n" \
                 + f"🎧 **Permintaan:** {message.from_user.mention}",
         reply_markup=keyboard)
         os.remove("final.png")
@@ -237,8 +241,8 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"🔮 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
+        caption=f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n" \
+                + f"🔮 **Status:** Playing\n🎧 **Permintaan:** {message. from_user.mention}".format(
         message.from_user.mention()
         ),
     )
