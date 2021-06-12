@@ -219,7 +219,6 @@ async def play(_, message: Message):
                         InlineKeyboardButton(
                             text="Group Music",
                             url='https://t.me/ZeeedMusic')
-
                     ]
                 ]
             )
