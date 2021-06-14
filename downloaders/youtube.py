@@ -9,7 +9,7 @@ ydl_opts = {
     "format": "bestaudio/best",
     "geo-bypass": True,
     "nocheckcertificate": True,
-    "outtmpl": "downloads/%(id)s.%(ext)s.%(ext)s",
+    "outtmpl": "downloads/%(id)s.(ext)s",
 }
 ydl = YoutubeDL(ydl_opts)
 
